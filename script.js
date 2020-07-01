@@ -1,7 +1,7 @@
 class NyanCat{
     constructor(){
-        const nyan = ["images/nyanCat.gif","images/nyanCatGold.gif",
-            "images/nyanCatMexico.gif","images/nyanCatPikachu.gif"]
+        const nyan = ['images/nyanCat.gif','images/nyanCatGold.gif',
+            'images/nyanCatMexico.gif','images/nyanCatPikachu.gif']
         this.x = -800
         this.y = 0
         this.baseY = Math.random()*window.innerWidth
