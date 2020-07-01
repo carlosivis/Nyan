@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyan Waifu</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id = "cats">    
+    <button id="addCat" onclick="add()">Mais um Nyan</button>
+    <button id="removeCat">Faça um Nyan sumir</button>
+    </div>
+    
+    <script src="/script.js"></script>
+    <script>
+        let cats = [new NyanCat(), new NyanCat(),new NyanCat()]
+        setInterval(() => {
+            for (let i = 0; i < cats.length; i++) {
+                cats[i].move()
+            }  
+        }, 33);
+        if(cats[0]!=null){
+        let removeEl = document.querySelector('#removeCat');
+        removeEl.addEventListener('click', () => {
+            cats[cats.length-1].image.remove()
+            cats.pop()
+        });
+    }
+    </script>
+</body>
+</html>
